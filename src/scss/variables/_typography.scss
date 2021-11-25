@@ -4,7 +4,7 @@
 
 // Override Bootstrap typography variables
 
-$font-family-base: "Mulish",
+$font-family-base: "Open Sans",
 -apple-system,
 BlinkMacSystemFont,
 "Segoe UI",
@@ -17,7 +17,7 @@ sans-serif,
 "Segoe UI Symbol",
 "Noto Color Emoji";
 
-$headings-font-family: "Newsreader",
+$headings-font-family: "Merriweather",
 -apple-system,
 BlinkMacSystemFont,
 "Segoe UI",
@@ -48,4 +48,4 @@ sans-serif,
 // Override default Bootstrap font weights
 
 $font-weight-normal: 500;
-$headings-font-weight: 600;
+$headings-font-weight: 700;
