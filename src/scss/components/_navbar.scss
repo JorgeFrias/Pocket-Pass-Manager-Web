@@ -8,8 +8,8 @@
     background-color: $white;
 
     .navbar-brand {
-        font-family: $alt-font-family;
-
+        font-family: $headings-font-family;
+        font-weight: 900 !important;
         &:hover,
         &:active {
             color: $primary;
