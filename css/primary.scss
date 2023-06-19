@@ -1,0 +1,70 @@
+// Imports
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Open+Sans:wght@400;600&display=swap');
+
+// Text
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+    font-weight: 900;
+}
+
+h1 {
+    font-size: 3.2rem;
+}
+
+p, a, span, li, input, textarea {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+
+    strong {
+        font-weight: 600;
+    }
+}
+
+// Color
+.dark-bg {
+    background-color: #000;
+    color: #fff;
+
+    h1, h2, h3, h4, h5, h6 {
+        color: #fff;
+    }
+
+    p {
+        color: #C5C9CB;
+
+        strong {
+            color: #fff;
+        }
+    }
+}
+
+// Layout
+h1 {
+    margin-bottom: 1rem;
+}
+
+.container-fluid {
+    margin: 0;
+}
+
+[class^="col"] {
+    padding: 100px;
+}
+
+// Concrete Elements
+.hero-section {
+    height: 90vh;
+    overflow: hidden;
+
+    .logo {
+        height: 2rem;
+        margin-bottom: 2rem;
+    }
+    .device {
+        // transform: translateY(-50%);
+        // transform: scale(2);
+        // Transform scale and translate
+        transform: scale(1.2) translateY(-20%);
+    }
+}
+

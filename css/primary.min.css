@@ -1,1 +1,55 @@
-/*# sourceMappingURL=primary.min.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Open+Sans:wght@400;600&display=swap");
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+p, a, span, li, input, textarea {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+p strong, a strong, span strong, li strong, input strong, textarea strong {
+  font-weight: 600;
+}
+
+.dark-bg {
+  background-color: #000;
+  color: #fff;
+}
+.dark-bg h1, .dark-bg h2, .dark-bg h3, .dark-bg h4, .dark-bg h5, .dark-bg h6 {
+  color: #fff;
+}
+.dark-bg p {
+  color: #C5C9CB;
+}
+.dark-bg p strong {
+  color: #fff;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+.container-fluid {
+  margin: 0;
+}
+
+[class^=col] {
+  padding: 100px;
+}
+
+.hero-section {
+  height: 90vh;
+  overflow: hidden;
+}
+.hero-section .logo {
+  height: 2rem;
+  margin-bottom: 2rem;
+}
+.hero-section .device {
+  transform: scale(1.2) translateY(-20%);
+}/*# sourceMappingURL=primary.min.css.map */
