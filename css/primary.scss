@@ -1,6 +1,9 @@
 // Imports
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Open+Sans:wght@400;600&display=swap');
 
+// Definitions
+$leading-spacing: 100px;
+
 // Text
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Merriweather', serif;
@@ -9,6 +12,10 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: 3.2rem;
+}
+
+h2 {
+    font-size: 2.8rem;
 }
 
 p, a, span, li, input, textarea {
@@ -38,6 +45,24 @@ p, a, span, li, input, textarea {
     }
 }
 
+.light-bg {
+    background-color: #F0F0F0;
+    color: #000;
+
+    h1, h2, h3, h4, h5, h6 {
+        color: #000;
+    }
+
+    p {
+        color: #434343;
+
+        strong {
+            color: #000;
+        }
+    }
+}
+
+
 // Layout
 h1 {
     margin-bottom: 1rem;
@@ -47,24 +72,57 @@ h1 {
     margin: 0;
 }
 
-[class^="col"] {
-    padding: 100px;
-}
 
 // Concrete Elements
 .hero-section {
     height: 90vh;
     overflow: hidden;
-
+    
+    [class^="col"] {
+        padding: $leading-spacing;
+    }
+    
     .logo {
         height: 2rem;
         margin-bottom: 2rem;
     }
     .device {
-        // transform: translateY(-50%);
-        // transform: scale(2);
-        // Transform scale and translate
         transform: scale(1.2) translateY(-20%);
     }
 }
 
+.features-section {
+    height: 90vh;
+
+    .title {
+        padding-left: $leading-spacing;
+    }
+
+    .col-12 {
+        padding-left: 0;
+        padding-right: 0;
+        overflow: auto;
+    }
+
+    .scrolling-wrapper{
+        overflow-x: auto;
+    }
+
+    .previews {
+        overflow: visible;
+        
+
+        [class^="col"] {
+            padding-left: 0;
+            padding-right: 0.2rem;
+
+            &:first-child {
+                margin-left: $leading-spacing;
+            }
+            
+            img {
+                border-radius: 2rem;
+            }
+        }
+    }
+}
