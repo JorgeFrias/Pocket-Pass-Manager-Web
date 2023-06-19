@@ -91,13 +91,16 @@ h1 {
     }
 }
 
-.features-section {
+.regular-section {
     height: 90vh;
 
     .title {
         padding-left: $leading-spacing;
+        margin-bottom: 2rem;        
     }
+}
 
+.features-section {
     .col-12 {
         padding-left: 0;
         padding-right: 0;
@@ -118,6 +121,10 @@ h1 {
 
             &:first-child {
                 margin-left: $leading-spacing;
+            }
+
+            &:last-child {
+                margin-right: $leading-spacing;
             }
             
             img {

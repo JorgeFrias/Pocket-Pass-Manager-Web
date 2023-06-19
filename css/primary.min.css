@@ -71,12 +71,14 @@ h1 {
   transform: scale(1.2) translateY(-20%);
 }
 
-.features-section {
+.regular-section {
   height: 90vh;
 }
-.features-section .title {
+.regular-section .title {
   padding-left: 100px;
+  margin-bottom: 2rem;
 }
+
 .features-section .col-12 {
   padding-left: 0;
   padding-right: 0;
@@ -94,6 +96,9 @@ h1 {
 }
 .features-section .previews [class^=col]:first-child {
   margin-left: 100px;
+}
+.features-section .previews [class^=col]:last-child {
+  margin-right: 100px;
 }
 .features-section .previews [class^=col] img {
   border-radius: 2rem;
