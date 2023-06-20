@@ -110,6 +110,11 @@ h1 {
     .device {
         transform: scale(1.2) translateY(-20%);
     }
+
+    .app-store-badge > img {
+        height: 3rem;
+        margin-top: 2rem;
+    }
 }
 
 .regular-section {

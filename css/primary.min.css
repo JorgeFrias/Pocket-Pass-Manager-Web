@@ -95,6 +95,10 @@ h1 {
 .hero-section .device {
   transform: scale(1.2) translateY(-20%);
 }
+.hero-section .app-store-badge > img {
+  height: 3rem;
+  margin-top: 2rem;
+}
 
 .regular-section {
   padding-top: 6rem;
