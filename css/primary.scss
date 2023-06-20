@@ -285,6 +285,18 @@ body {
             object-fit: contain;
         }
     }
+    .access-from {
+        * {
+            display: inline;
+            margin-right: 0.3rem;
+            margin-left: 0.3rem;
+
+            @media (min-width: $breakpoint-md) {
+                margin-right: 0.5rem;
+                margin-left: 0.5rem;
+            }
+        }
+    }
 }
 
 .privacy-section {

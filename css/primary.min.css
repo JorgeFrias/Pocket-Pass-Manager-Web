@@ -241,6 +241,17 @@ body {
   -o-object-fit: contain;
      object-fit: contain;
 }
+.server-section .access-from * {
+  display: inline;
+  margin-right: 0.3rem;
+  margin-left: 0.3rem;
+}
+@media (min-width: 768px) {
+  .server-section .access-from * {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+  }
+}
 
 .privacy-section {
   min-height: 80vh;
