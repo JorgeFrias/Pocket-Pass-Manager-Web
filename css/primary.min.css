@@ -35,6 +35,10 @@ textarea strong {
   font-weight: 600;
 }
 
+a {
+  text-decoration: none;
+}
+
 .dark-bg {
   background-color: #000;
   color: #fff;
@@ -178,4 +182,9 @@ h1 {
 .privacy-section h2 img {
   height: 3rem;
   margin-left: 1rem;
+}
+
+.closing-section .app-store-badge img {
+  height: 3rem;
+  margin-bottom: 2rem;
 }/*# sourceMappingURL=primary.min.css.map */

@@ -37,6 +37,10 @@ textarea {
     }
 }
 
+a {
+    text-decoration: none;
+}
+
 // Color
 .dark-bg {
     background-color: #000;
@@ -218,6 +222,15 @@ h1 {
         img {
             height: 3rem;
             margin-left: 1rem;
+        }
+    }
+}
+
+.closing-section {
+    .app-store-badge{
+        img {
+            height: 3rem;
+            margin-bottom: 2rem;
         }
     }
 }
