@@ -119,7 +119,7 @@ body {
 }
 
 .hero-section {
-  height: 9h;
+  min-height: 80vh;
   overflow: hidden;
   padding-top: 4rem;
   padding-bottom: 3rem;
@@ -132,13 +132,22 @@ body {
 }
 @media (min-width: 768px) {
   .hero-section [class^=col] {
-    padding: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+@media (min-width: 768px) {
+  .hero-section [class^=col].hero-title {
+    padding-right: 2rem;
   }
 }
 .hero-section .logo {
   height: 2rem;
   margin-bottom: 2rem;
   max-width: 60vw;
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .hero-section .device {
   transform: scale(0.8);

@@ -139,7 +139,7 @@ body {
 }
 
 .hero-section {
-    height: 9h;
+    min-height: 80vh;
     overflow: hidden;
 
     padding-top: 4rem;
@@ -152,7 +152,14 @@ body {
 
     [class^="col"] {
         @media (min-width: $breakpoint-md) {
-            padding: $leading-spacing-md;
+            padding-left: $leading-spacing-md;
+            padding-right: $leading-spacing-md;
+        }
+
+        &.hero-title {
+            @media (min-width: $breakpoint-md) {
+                padding-right: 2rem;
+            }
         }
     }
 
@@ -160,6 +167,8 @@ body {
         height: 2rem;
         margin-bottom: 2rem;
         max-width: 60vw;
+        max-width: 100%;
+        object-fit: contain;
     }
 
     .device {
