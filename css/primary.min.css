@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Open+Sans:wght@400;600&display=swap");
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Merriweather", serif;
   font-weight: 900;
 }
@@ -12,11 +17,21 @@ h2 {
   font-size: 2.8rem;
 }
 
-p, a, span, li, input, textarea {
+p,
+a,
+span,
+li,
+input,
+textarea {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
 }
-p strong, a strong, span strong, li strong, input strong, textarea strong {
+p strong,
+a strong,
+span strong,
+li strong,
+input strong,
+textarea strong {
   font-weight: 600;
 }
 
@@ -24,7 +39,12 @@ p strong, a strong, span strong, li strong, input strong, textarea strong {
   background-color: #000;
   color: #fff;
 }
-.dark-bg h1, .dark-bg h2, .dark-bg h3, .dark-bg h4, .dark-bg h5, .dark-bg h6 {
+.dark-bg h1,
+.dark-bg h2,
+.dark-bg h3,
+.dark-bg h4,
+.dark-bg h5,
+.dark-bg h6 {
   color: #fff;
 }
 .dark-bg p {
@@ -38,7 +58,12 @@ p strong, a strong, span strong, li strong, input strong, textarea strong {
   background-color: #F0F0F0;
   color: #000;
 }
-.light-bg h1, .light-bg h2, .light-bg h3, .light-bg h4, .light-bg h5, .light-bg h6 {
+.light-bg h1,
+.light-bg h2,
+.light-bg h3,
+.light-bg h4,
+.light-bg h5,
+.light-bg h6 {
   color: #000;
 }
 .light-bg p {
@@ -72,11 +97,15 @@ h1 {
 }
 
 .regular-section {
-  height: 90vh;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 .regular-section .title {
   padding-left: 100px;
   margin-bottom: 2rem;
+}
+.regular-section .title.text-center {
+  padding-left: 0;
 }
 
 .features-section .col-12 {
@@ -86,6 +115,15 @@ h1 {
 }
 .features-section .scrolling-wrapper {
   overflow-x: auto;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+.features-section .scrolling-wrapper::-webkit-scrollbar {
+  display: none;
 }
 .features-section .previews {
   overflow: visible;
@@ -104,4 +142,9 @@ h1 {
 .features-section .previews .col img {
   border-radius: 2rem;
   height: 40rem;
+}
+
+.server-section .server-image img {
+  max-width: 100%;
+  max-height: 70vh;
 }/*# sourceMappingURL=primary.min.css.map */
