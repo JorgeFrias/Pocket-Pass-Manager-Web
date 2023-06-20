@@ -57,7 +57,7 @@ h1 {
 }
 
 .hero-section {
-  height: 90vh;
+  height: 9h;
   overflow: hidden;
 }
 .hero-section [class^=col] {
@@ -90,16 +90,18 @@ h1 {
 .features-section .previews {
   overflow: visible;
 }
-.features-section .previews [class^=col] {
+.features-section .previews .col {
   padding-left: 0;
-  padding-right: 0.2rem;
+  padding-right: 0;
+  margin-right: 0.3rem;
 }
-.features-section .previews [class^=col]:first-child {
+.features-section .previews .col:first-child {
   margin-left: 100px;
 }
-.features-section .previews [class^=col]:last-child {
+.features-section .previews .col:last-child {
   margin-right: 100px;
 }
-.features-section .previews [class^=col] img {
+.features-section .previews .col img {
   border-radius: 2rem;
+  height: 40rem;
 }/*# sourceMappingURL=primary.min.css.map */

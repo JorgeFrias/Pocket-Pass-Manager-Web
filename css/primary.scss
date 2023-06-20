@@ -75,7 +75,7 @@ h1 {
 
 // Concrete Elements
 .hero-section {
-    height: 90vh;
+    height: 9h;
     overflow: hidden;
     
     [class^="col"] {
@@ -113,11 +113,11 @@ h1 {
 
     .previews {
         overflow: visible;
-        
 
-        [class^="col"] {
+        .col {
             padding-left: 0;
-            padding-right: 0.2rem;
+            padding-right: 0;
+            margin-right: 0.3rem;
 
             &:first-child {
                 margin-left: $leading-spacing;
@@ -129,6 +129,8 @@ h1 {
             
             img {
                 border-radius: 2rem;
+                height: 40rem;
+                // width: 100%;
             }
         }
     }
