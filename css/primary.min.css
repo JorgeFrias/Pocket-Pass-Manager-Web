@@ -73,6 +73,25 @@ textarea strong {
   color: #000;
 }
 
+.white-bg {
+  background-color: #f6f6f8;
+  color: #000;
+}
+.white-bg h1,
+.white-bg h2,
+.white-bg h3,
+.white-bg h4,
+.white-bg h5,
+.white-bg h6 {
+  color: #000;
+}
+.white-bg p {
+  color: #434343;
+}
+.white-bg p strong {
+  color: #000;
+}
+
 h1 {
   margin-bottom: 1rem;
 }
@@ -93,7 +112,7 @@ h1 {
   margin-bottom: 2rem;
 }
 .hero-section .device {
-  transform: scale(1.2) translateY(-20%);
+  transform: scale(1.2) translateY(-10%);
 }
 .hero-section .app-store-badge > img {
   height: 3rem;
@@ -151,4 +170,12 @@ h1 {
 .server-section .server-image img {
   max-width: 100%;
   max-height: 70vh;
+}
+
+.privacy-section {
+  min-height: 80vh;
+}
+.privacy-section h2 img {
+  height: 3rem;
+  margin-left: 1rem;
 }/*# sourceMappingURL=primary.min.css.map */
