@@ -235,7 +235,7 @@ body {
         margin-left: 1rem;
         
         @media (min-width: $breakpoint-md) {
-            padding-left: $leading-spacing-md;
+            margin-left: $leading-spacing-md;
         }
     }
 
@@ -261,9 +261,11 @@ body {
 
             &:last-child {
                 margin-right: $leading-spacing;
-
+                padding-right: calc($leading-spacing-md / 2);
+                
                 @media (min-width: $breakpoint-md) {
-                    margin-left: $leading-spacing-md;
+                    margin-right: $leading-spacing-md;
+                    padding-right: calc($leading-spacing-md / 2);
                 }
             }
 

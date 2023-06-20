@@ -200,7 +200,7 @@ body {
 }
 @media (min-width: 768px) {
   .features-section .title {
-    padding-left: 100px;
+    margin-left: 100px;
   }
 }
 .features-section .previews {
@@ -224,10 +224,12 @@ body {
 }
 .features-section .previews .col:last-child {
   margin-right: 3rem;
+  padding-right: 50px;
 }
 @media (min-width: 768px) {
   .features-section .previews .col:last-child {
-    margin-left: 100px;
+    margin-right: 100px;
+    padding-right: 50px;
   }
 }
 .features-section .previews .col img {
