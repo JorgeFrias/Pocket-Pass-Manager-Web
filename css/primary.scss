@@ -24,11 +24,19 @@ h6 {
 }
 
 h1 {
-    font-size: 3.2rem;
+    font-size: 2.5rem;
+
+    @media (min-width: $breakpoint-sm) {
+        font-size: 3.2rem;
+    }
 }
 
 h2 {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
+
+    @media (min-width: $breakpoint-sm) {
+        font-size: 2.8rem;
+    }
 }
 
 p,
@@ -134,9 +142,15 @@ body {
     height: 9h;
     overflow: hidden;
 
-    [class^="col"] {
-        padding: $leading-spacing;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
 
+    @media (min-width: $breakpoint-md) {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    [class^="col"] {
         @media (min-width: $breakpoint-md) {
             padding: $leading-spacing-md;
         }
@@ -145,6 +159,7 @@ body {
     .logo {
         height: 2rem;
         margin-bottom: 2rem;
+        max-width: 60vw;
     }
 
     .device {
@@ -153,6 +168,7 @@ body {
         // @media (min-width: $breakpoint-sm) {
         //     transform: scale(0.6) translateY(-50%);
         // }
+        transform: scale(0.8);
 
         @media (min-width: $breakpoint-md) {
             transform: scale(0.8)
@@ -176,12 +192,6 @@ body {
     padding-bottom: 6rem;
 
     .title {
-        padding-left: $leading-spacing;
-
-        @media (min-width: $breakpoint-md) {
-            padding-left: $leading-spacing-md;
-        }
-
         margin-bottom: 2rem;
 
         &.text-center {
@@ -212,20 +222,32 @@ body {
         /* Firefox */
     }
 
+    .title {
+        margin-left: 1rem;
+        
+        @media (min-width: $breakpoint-md) {
+            padding-left: $leading-spacing-md;
+        }
+    }
+
     .previews {
         overflow: visible;
 
         .col {
-            padding-left: 0;
-            padding-right: 0;
+            padding-right: 0;      
+            padding-left: 0;      
             margin-right: 0.3rem;
 
             &:first-child {
-                margin-left: $leading-spacing;
-
+                margin-left: 1rem;
                 @media (min-width: $breakpoint-md) {
                     margin-left: $leading-spacing-md;
                 }
+            }
+
+            // Other than first
+            &:not(:first-child) {
+                margin-left: 0;
             }
 
             &:last-child {
@@ -261,11 +283,17 @@ body {
 
     h2 {
         img {
-            height: 3rem;
+            height: 2.2rem;
             margin-left: 1rem;
+
+            @media (min-width: $breakpoint-md) {
+                height: 3rem;
+            }
+
         }
     }
 }
+
 
 .closing-section {
     .app-store-badge {
