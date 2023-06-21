@@ -199,6 +199,7 @@ body {
   padding-left: 0;
   padding-right: 0;
   overflow: auto;
+  overflow-y: hidden;
 }
 .features-section .scrolling-wrapper {
   overflow-x: auto;
@@ -220,9 +221,6 @@ body {
     margin-left: 100px;
   }
 }
-.features-section .previews {
-  overflow: visible;
-}
 .features-section .previews .col {
   padding-right: 0;
   padding-left: 0;
@@ -240,13 +238,11 @@ body {
   margin-left: 0;
 }
 .features-section .previews .col:last-child {
-  margin-right: 3rem;
-  padding-right: 50px;
+  padding-right: 3rem;
 }
 @media (min-width: 768px) {
   .features-section .previews .col:last-child {
     margin-right: 100px;
-    padding-right: 50px;
   }
 }
 .features-section .previews .col img {
@@ -335,6 +331,15 @@ body {
   transition: 1s all ease;
 }
 .reveal-fade-in.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+.reveal-slide-up {
+  transform: translateY(30px);
+  opacity: 1;
+  transition: 1s all ease;
+}
+.reveal-slide-up.active {
   transform: translateY(0);
   opacity: 1;
 }

@@ -239,6 +239,8 @@ body {
         padding-left: 0;
         padding-right: 0;
         overflow: auto;
+
+        overflow-y: hidden
     }
 
     .scrolling-wrapper {
@@ -253,7 +255,7 @@ body {
         -ms-overflow-style: none;
         /* IE and Edge */
         scrollbar-width: none;
-        /* Firefox */
+        /* Firefox */        
     }
 
     .title {
@@ -265,7 +267,7 @@ body {
     }
 
     .previews {
-        overflow: visible;
+        // overflow: visible;
 
         .col {
             padding-right: 0;
@@ -286,12 +288,10 @@ body {
             }
 
             &:last-child {
-                margin-right: $leading-spacing;
-                padding-right: calc($leading-spacing-md / 2);
-
+                padding-right: $leading-spacing;
+                
                 @media (min-width: $breakpoint-md) {
                     margin-right: $leading-spacing-md;
-                    padding-right: calc($leading-spacing-md / 2);
                 }
             }
 
@@ -410,6 +410,18 @@ body {
         position: relative;
         transform: translateY(30px);
         opacity: 0;
+        transition: 1s all ease;
+
+        &.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    &-slide-up {
+        // position: relative;
+        transform: translateY(30px);
+        opacity: 1;
         transition: 1s all ease;
 
         &.active {

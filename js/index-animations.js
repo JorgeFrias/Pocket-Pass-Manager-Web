@@ -1,6 +1,6 @@
 /// Runs when page is scrolled and the element is visible
 function revealJQuery() {
-    var reveals = $(".reveal-fade-in, .reveal-scale");
+    var reveals = $(".reveal-fade-in, .reveal-scale, .reveal-slide-up");
     
     for (var i = 0; i < reveals.length; i++) {
         var windowHeight = window.innerHeight;
