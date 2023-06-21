@@ -174,6 +174,17 @@ body {
 .hero-section .app-store-badge a img {
   height: 3rem;
 }
+.hero-section .app-store-badge .download-qr {
+  height: 0;
+  width: 0;
+}
+.hero-section .app-store-badge .grow {
+  height: 50px;
+  width: 50px;
+  border-radius: 8px;
+  padding: 5px;
+  background-color: #ffffff;
+}
 
 .regular-section {
   padding-top: 6rem;
@@ -280,6 +291,17 @@ body {
   height: 3rem;
   margin-bottom: 2rem;
 }
+.closing-section .download-qr {
+  height: 0;
+  width: 0;
+}
+.closing-section .grow {
+  height: 50px;
+  width: 50px;
+  border-radius: 8px;
+  padding: 5px;
+  background-color: #ffffff;
+}
 
 @media (min-width: 768px) {
   .w-md-25 {
@@ -300,4 +322,13 @@ body {
   .w-md-100 {
     width: 100% !important;
   }
+}
+
+.growing-element {
+  transition: all 0.3s ease-in-out;
+}
+
+.grow {
+  transform: scale(3);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 20px -3px;
 }/*# sourceMappingURL=primary.min.css.map */

@@ -9,10 +9,13 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="css/primary.min.css" />
     <link rel="stylesheet" href="dist/devices.min.css">
     <!-- JS -->
+    
     <!-- App Store Banner -->
     <meta name="apple-itunes-app" content="app-id=1563839314">
     <!-- Safari color palette -->
@@ -35,10 +38,13 @@
                         the
                         internet. <strong>No password leaves your device ever.</strong></p>
                     <!-- Download on the App Store badge -->
-                    <div class="d-flex align-items-center app-store-badge">
+                    <div class="d-flex align-items-center app-store-badge growing-container">
                         <a href="https://apps.apple.com/us/app/pocket-pass-manager/id1563839314" target="_blank"
                             class="">
                             <img src="img/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg" class="img-fluid"
+                                alt="Download on the App Store">
+
+                            <img src="img/ppm-download.png" class="growing-element download-qr"
                                 alt="Download on the App Store">
                         </a>
                         <p class="">Start for free!</p>
@@ -161,12 +167,15 @@
         <div class="row light-bg regular-section closing-section">
             <div class="col-12 d-flex justify-content-center">
                 <div>
-                    <div class="text-center app-store-badge">
+                    <div class="text-center app-store-badge growing-container">
                         <!-- Download on the App Store badge -->
                         <a href="https://apps.apple.com/us/app/pocket-pass-manager/id1563839314" target="_blank"
                             class="app-store-badge">
                             <img src="img/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg" class="img-fluid"
                                 alt="Download on the App Store">
+
+                            <img src="img/ppm-download.png" class="growing-element download-qr"
+                            alt="Download on the App Store">
                         </a>
                     </div>
 
@@ -177,6 +186,19 @@
             </div>
         </div>
     </div>
+
+    <!-- Scripts -->
+    <script type="text/javascript">
+        $( ".growing-container" ).hover(
+          function() {
+            // In
+            $(" .growing-element ").addClass('grow');
+          }, function() {
+            // Out
+            $(" .growing-element ").removeClass('grow');
+          }
+        );
+      </script>
 </body>
 
 </html>

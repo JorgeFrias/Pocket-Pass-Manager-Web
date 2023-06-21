@@ -190,14 +190,30 @@ body {
 
     .app-store-badge {
         margin-top: 2rem;
+
         p {
             margin-bottom: 0;
         }
+
         a {
             margin-right: 1rem;
+
             img {
-                height: 3rem;    
+                height: 3rem;
             }
+        }
+
+        .download-qr {
+            height: 0;
+            width: 0;
+        }
+
+        .grow {
+            height: 50px;
+            width: 50px;
+            border-radius: 8px;
+            padding: 5px;
+            background-color: #ffffff;
         }
     }
 }
@@ -335,6 +351,19 @@ body {
             margin-bottom: 2rem;
         }
     }
+
+    .download-qr {
+        height: 0;
+        width: 0;
+    }
+
+    .grow {
+        height: 50px;
+        width: 50px;
+        border-radius: 8px;
+        padding: 5px;
+        background-color: #ffffff;
+    }
 }
 
 // Not on bootstrap, but I need it
@@ -364,4 +393,16 @@ body {
             }
         }
     }
+}
+
+// Growing stuff
+.growing-container {}
+
+.growing-element {
+    transition: all .3s ease-in-out;
+}
+
+.grow {
+    transform: scale(3);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 20px -3px;
 }
