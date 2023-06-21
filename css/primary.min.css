@@ -338,7 +338,6 @@ body {
   transform: translateY(0);
   opacity: 1;
 }
-
 .reveal-scale {
   position: relative;
   transform: scale(0.95);
