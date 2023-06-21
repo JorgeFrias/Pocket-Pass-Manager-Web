@@ -162,9 +162,17 @@ body {
     transform: scale(1.1) translateY(-20%);
   }
 }
-.hero-section .app-store-badge > img {
-  height: 3rem;
+.hero-section .app-store-badge {
   margin-top: 2rem;
+}
+.hero-section .app-store-badge p {
+  margin-bottom: 0;
+}
+.hero-section .app-store-badge a {
+  margin-right: 1rem;
+}
+.hero-section .app-store-badge a img {
+  height: 3rem;
 }
 
 .regular-section {

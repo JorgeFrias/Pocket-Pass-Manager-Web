@@ -188,9 +188,17 @@ body {
         }
     }
 
-    .app-store-badge>img {
-        height: 3rem;
+    .app-store-badge {
         margin-top: 2rem;
+        p {
+            margin-bottom: 0;
+        }
+        a {
+            margin-right: 1rem;
+            img {
+                height: 3rem;    
+            }
+        }
     }
 }
 
@@ -233,7 +241,7 @@ body {
 
     .title {
         margin-left: 1rem;
-        
+
         @media (min-width: $breakpoint-md) {
             margin-left: $leading-spacing-md;
         }
@@ -243,12 +251,13 @@ body {
         overflow: visible;
 
         .col {
-            padding-right: 0;      
-            padding-left: 0;      
+            padding-right: 0;
+            padding-left: 0;
             margin-right: 0.3rem;
 
             &:first-child {
                 margin-left: 1rem;
+
                 @media (min-width: $breakpoint-md) {
                     margin-left: $leading-spacing-md;
                 }
@@ -262,7 +271,7 @@ body {
             &:last-child {
                 margin-right: $leading-spacing;
                 padding-right: calc($leading-spacing-md / 2);
-                
+
                 @media (min-width: $breakpoint-md) {
                     margin-right: $leading-spacing-md;
                     padding-right: calc($leading-spacing-md / 2);
@@ -287,6 +296,7 @@ body {
             object-fit: contain;
         }
     }
+
     .access-from {
         * {
             display: inline;
