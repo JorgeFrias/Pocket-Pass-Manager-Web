@@ -206,14 +206,15 @@ body {
         .download-qr {
             height: 0;
             width: 0;
+            image-rendering: crisp-edges;
         }
 
         .grow {
-            height: 50px;
-            width: 50px;
-            border-radius: 8px;
-            padding: 5px;
-            background-color: #ffffff;
+            height: auto;
+            width: 60px;
+            // border-radius: 8px;
+            // padding: 5px;
+            // background-color: #ffffff;
         }
     }
 }
@@ -352,17 +353,15 @@ body {
         }
     }
 
-    .download-qr {
+    img.download-qr {
         height: 0;
         width: 0;
+        image-rendering: crisp-edges;
     }
 
-    .grow {
-        height: 50px;
-        width: 50px;
-        border-radius: 8px;
-        padding: 5px;
-        background-color: #ffffff;
+    img.grow {
+        height: auto;
+        width: 60px;
     }
 }
 
@@ -404,5 +403,4 @@ body {
 
 .grow {
     transform: scale(3);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 20px -3px;
 }
