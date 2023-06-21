@@ -330,7 +330,7 @@ body {
 
 .reveal {
   position: relative;
-  transform: translateY(60px);
+  transform: translateY(30px);
   opacity: 0;
   transition: 1s all ease;
 }
