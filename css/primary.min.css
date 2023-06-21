@@ -347,4 +347,34 @@ body {
 .reveal-scale.active {
   transform: scale(1);
   opacity: 1;
+}
+.reveal-auto-opacity {
+  position: relative;
+  opacity: 0.4;
+  transition: 3s all ease-in-out;
+}
+.reveal-auto-opacity.active {
+  opacity: 1;
+}
+.reveal-auto-slide-down, .reveal-auto-slide-down-4, .reveal-auto-slide-down-3, .reveal-auto-slide-down-2, .reveal-auto-slide-down-1 {
+  position: relative;
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+.reveal-auto-slide-down-1 {
+  transition-delay: 0.6s;
+}
+.reveal-auto-slide-down-2 {
+  transition-delay: 0.9s;
+}
+.reveal-auto-slide-down-3 {
+  transition-delay: 0.9s;
+}
+.reveal-auto-slide-down-4 {
+  transition-delay: 1.2s;
+}
+.reveal-auto-slide-down.active, .active.reveal-auto-slide-down-1, .active.reveal-auto-slide-down-2, .active.reveal-auto-slide-down-3, .active.reveal-auto-slide-down-4 {
+  transform: translateY(0);
+  opacity: 1;
 }/*# sourceMappingURL=primary.min.css.map */

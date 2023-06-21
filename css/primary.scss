@@ -429,4 +429,49 @@ body {
             opacity: 1;
         }
     }
+
+    &-auto {
+        &-opacity {
+            position: relative;
+            opacity: 0.4;
+            transition: 3s all ease-in-out;
+    
+            &.active {
+                opacity: 1;
+            }
+        }
+
+        &-slide-down {
+            position: relative;
+            transform: translateY(-10px);
+            opacity: 0;
+            transition: 1s all ease-in-out;
+
+            &-1 {
+                @extend .reveal-auto-slide-down;
+                transition-delay: 0.6s;
+            }
+
+            &-2 {
+                @extend .reveal-auto-slide-down;
+                transition-delay: 0.9s;
+            }
+
+            &-3 {
+                @extend .reveal-auto-slide-down;
+                transition-delay: 0.9s;
+            }
+
+            &-4 {
+                @extend .reveal-auto-slide-down;
+                transition-delay: 1.2s;
+            }
+    
+            &.active {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+    }
 }
