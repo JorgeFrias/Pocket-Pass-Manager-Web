@@ -404,3 +404,28 @@ body {
 .grow {
     transform: scale(3);
 }
+
+// Animations
+.reveal {
+    position: relative;
+    transform: translateY(60px);
+    opacity: 0;
+    transition: 1s all ease;
+
+    &.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.reveal-fast {
+    position: relative;
+    transform:  scale(0.95);
+    opacity: 1;
+    transition: 1s all ease;
+
+    &.active {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
