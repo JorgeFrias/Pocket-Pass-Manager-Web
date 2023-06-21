@@ -406,7 +406,7 @@ body {
 }
 
 // Animations
-.reveal {
+.reveal-fade-in {
     position: relative;
     transform: translateY(30px);
     opacity: 0;
@@ -418,7 +418,7 @@ body {
     }
 }
 
-.reveal-fast {
+.reveal-scale {
     position: relative;
     transform:  scale(0.95);
     opacity: 1;

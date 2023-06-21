@@ -14,7 +14,7 @@ function reveal() {
 
 // Reveal func with JQuery
 function revealJQuery() {
-    var reveals = $(".reveal, .reveal-fast");
+    var reveals = $(".reveal-fade-in, .reveal-scale");
     
     for (var i = 0; i < reveals.length; i++) {
         var windowHeight = window.innerHeight;

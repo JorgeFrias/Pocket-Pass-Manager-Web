@@ -328,24 +328,24 @@ body {
   transform: scale(3);
 }
 
-.reveal {
+.reveal-fade-in {
   position: relative;
   transform: translateY(30px);
   opacity: 0;
   transition: 1s all ease;
 }
-.reveal.active {
+.reveal-fade-in.active {
   transform: translateY(0);
   opacity: 1;
 }
 
-.reveal-fast {
+.reveal-scale {
   position: relative;
   transform: scale(0.95);
   opacity: 1;
   transition: 1s all ease;
 }
-.reveal-fast.active {
+.reveal-scale.active {
   transform: scale(1);
   opacity: 1;
 }/*# sourceMappingURL=primary.min.css.map */
