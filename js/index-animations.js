@@ -37,20 +37,20 @@ $(document).ready(function () {
         var container = $('.scrolling-container');
         var content = $('.scrolling-content');
 
-        // This content width doesn't work, is smaller
-        // contentWidth = content.outerWidth() + parseInt(content.css('margin-left')) + parseInt(content.css('margin-right')) + parseInt(content.css('padding-left')) + parseInt(content.css('padding-right') + parseInt(container.css('padding-left')) + parseInt(container.css('padding-right')));
-        // This one works
-        // contentWidth = content.outerWidth() + parseInt(content.css('margin-left')) + parseInt(content.css('margin-right')) + parseInt(content.css('padding-left')) + parseInt(content.css('padding-right'));
+        // measure the content width
+        var scrollingWidth = $('.scrolling-width');
+        var children = scrollingWidth.children();
+
 
         container.on('wheel', function (e) {
+            // Add up all children width + margins + paddings
+            var scrollWidth = container.get(0).scrollWidth - container.outerWidth();
+            
             // Determine if the user is scrolling up or down
             var isScrollingUp = e.originalEvent.deltaY < 0;
-            var contentWidth = content.width() + parseInt(content.css('margin-left')) + parseInt(content.css('margin-right')) + parseInt(content.css('padding-left')) + parseInt(content.css('padding-right')) + parseInt(container.css('padding-left')) + parseInt(container.css('padding-right'));
-            console.log('contentWidth: ' + contentWidth);
-    
+                
             // - Scrolling down - end reached by -> regular scrolling
-            if (!isScrollingUp && container.scrollLeft() >= contentWidth) {
-                console.log('end reached, scroll position: ' + container.scrollLeft());
+            if (!isScrollingUp && container.scrollLeft() >= scrollWidth) {
                 return;
             // - Scrolling up - start reached -> regular scrolling
             } else if (isScrollingUp && container.scrollLeft() <= 0) {
