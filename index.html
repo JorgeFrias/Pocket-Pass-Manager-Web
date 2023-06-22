@@ -85,9 +85,9 @@
                 <!-- Carousel of images -->
                 <div class="previews reveal-slide-up">
                     <div class="container-fluid p-0">
-                        <div class="scrolling-wrapper">
+                        <div class="scrolling-wrapper scrolling-container">
                             <!-- 7 previews  -->
-                            <div class="row flex-row flex-nowrap m-0 scrolling-content">
+                            <div class="row flex-row flex-nowrap scrolling-content">
                                 <div class="col">
                                     <img src="/img/screens/iPhone 14 Plus-01.png" class="" alt="Pocket Pass Manager"
                                         loading="lazy">
@@ -217,33 +217,6 @@
         );
     </script>
     <script>
-$(document).ready(function () {
-    var container = $('.scrolling-wrapper');
-    var content = $('.scrolling-content');
-    var isHorizontalScrolling = false;
-
-    container.on('scroll', function (e) {
-        if (isHorizontalScrolling) {
-            e.preventDefault();
-            return false;
-        }
-    });
-
-    container.on('wheel', function (e) {
-        if (container.is(e.target) || container.has(e.target).length > 0) {
-            var delta = e.originalEvent.deltaY;
-            var scrollAmount = delta * 1;
-
-            container.scrollLeft(container.scrollLeft() + scrollAmount);
-            e.preventDefault();
-            isHorizontalScrolling = true;
-
-            setTimeout(function () {
-                isHorizontalScrolling = false;
-            }, 100);
-        }
-    });
-});
     </script>
 </body>
 
