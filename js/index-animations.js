@@ -37,11 +37,6 @@ $(document).ready(function () {
         var container = $('.scrolling-container');
         var content = $('.scrolling-content');
 
-        // measure the content width
-        var scrollingWidth = $('.scrolling-width');
-        var children = scrollingWidth.children();
-
-
         container.on('wheel', function (e) {
             // Add up all children width + margins + paddings
             var scrollWidth = container.get(0).scrollWidth - container.outerWidth();
