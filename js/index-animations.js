@@ -36,50 +36,35 @@ $(document).ready(function () {
     $(document).ready(function () {
         var container = $('.scrolling-container');
         var content = $('.scrolling-content');
-        var isHorizontalScrolling = false;
 
-        contentWidth = content.outerWidth() + parseInt(content.css('margin-left')) + parseInt(content.css('margin-right')) + parseInt(content.css('padding-left')) + parseInt(content.css('padding-right') + parseInt(container.css('padding-left')) + parseInt(container.css('padding-right')));
-
-        container.on('scroll', function (e) {
-            if (isHorizontalScrolling) {
-                console.log('horizontal scrolling');
-                e.preventDefault();
-                return false;
-            }
-
-            // Check if the horizontal scroll has reached the end
-            if (container.scrollLeft() >= contentWidth) {
-                // Allow vertical scrolling when the end is reached
-                console.log('end reached. \t Status: scrollLeft: ' + container.scrollLeft() + ' innerWidth: ' + container.innerWidth() + ' outerWidth: ' + outerWidth);
-                isHorizontalScrolling = false;
-                e.preventDefault();
-                // e.stopPropagation();
-                // e.stopImmediatePropagation();
-            }
-        });
+        // This content width doesn't work, is smaller
+        // contentWidth = content.outerWidth() + parseInt(content.css('margin-left')) + parseInt(content.css('margin-right')) + parseInt(content.css('padding-left')) + parseInt(content.css('padding-right') + parseInt(container.css('padding-left')) + parseInt(container.css('padding-right')));
+        // This one works
+        // contentWidth = content.outerWidth() + parseInt(content.css('margin-left')) + parseInt(content.css('margin-right')) + parseInt(content.css('padding-left')) + parseInt(content.css('padding-right'));
 
         container.on('wheel', function (e) {
             // Determine if the user is scrolling up or down
             var isScrollingUp = e.originalEvent.deltaY < 0;
-
-            // - Scrolling down - end reached by
+            var contentWidth = content.width() + parseInt(content.css('margin-left')) + parseInt(content.css('margin-right')) + parseInt(content.css('padding-left')) + parseInt(content.css('padding-right')) + parseInt(container.css('padding-left')) + parseInt(container.css('padding-right'));
+            console.log('contentWidth: ' + contentWidth);
+    
+            // - Scrolling down - end reached by -> regular scrolling
             if (!isScrollingUp && container.scrollLeft() >= contentWidth) {
+                console.log('end reached, scroll position: ' + container.scrollLeft());
                 return;
+            // - Scrolling up - start reached -> regular scrolling
             } else if (isScrollingUp && container.scrollLeft() <= 0) {
                 return;
             }
-
+            
+            // - Scrolling down and end not reached -> horizontal scrolling
+            // - Scrolling up and start not reached -> horizontal scrolling
             if (container.is(e.target) || container.has(e.target).length > 0) {
                 var delta = e.originalEvent.deltaY;
                 var scrollAmount = delta * 1;
 
                 container.scrollLeft(container.scrollLeft() + scrollAmount);
                 e.preventDefault();
-                isHorizontalScrolling = true;
-
-                setTimeout(function () {
-                    isHorizontalScrolling = false;
-                }, 100);
             }
         });
     });
