@@ -31,60 +31,23 @@ $(document).ready(function () {
     revealJQueryAuto();
 });
 
-// Scroll horizontal
-/// Determines if the element is approximately centered vertically on the viewport
-function isElementCenteredVertically(element) {
-    // Only scroll if the container is in the viewport center
-    var windowHeight = $(window).height();
-    var containerHeight = element.outerHeight();
-    var scrollTop = $(window).scrollTop();
-
-    var exactCenterPosition = scrollTop + (windowHeight / 2) - (containerHeight / 2);
-    var errorMargin = windowHeight * 0.2; // 10% of the window height
-
-    var lowerBound = exactCenterPosition - errorMargin;
-    var upperBound = exactCenterPosition + errorMargin;
-    var containerTop = element.offset().top;
-
-    return (containerTop >= lowerBound && containerTop <= upperBound);
-}
-
-
 $(document).ready(function () {
-    $(document).ready(function () {
-        var container = $('.scrolling-container');
-        
-        document.addEventListener('wheel', function(e) {
-            // Wrap the event in a jQuery event
-            var $e = $.Event(e);
-            // Only scroll if the container is in the viewport center
-            if (!isElementCenteredVertically(container)) {
-                return true;
-            }
-            // If is scrolling horizontally let it pass
-            if ($e.originalEvent.deltaX !== 0) {
-                return;
-            }
-            // Add up all children width + margins + paddings
-            var scrollWidth = container.get(0).scrollWidth - container.outerWidth();
-            // Determine if the user is scrolling up or down
-            var isScrollingUp = $e.originalEvent.deltaY < 0;
-            // - Scrolling down - end reached by -> regular scrolling
-            if (!isScrollingUp && container.scrollLeft() >= scrollWidth) {
-                return;
-                // - Scrolling up - start reached -> regular scrolling
-            } else if (isScrollingUp && container.scrollLeft() <= 0) {
-                return;
-            }
+    var container = $('.scrolling-container');
+    var buttonLeft = $('.scrolling-button-left');
+    var buttonRight = $('.scrolling-button-right');
+    var previewColum = $('.scrolling-content .col');
+    
+    buttonLeft.on('click', function () {
+        var previewWidth = previewColum.width();
+        container.animate({
+            scrollLeft: '-=' + previewWidth
+        }, 300);
+    });
 
-            // - Scrolling down and end not reached -> horizontal scrolling
-            // - Scrolling up and start not reached -> horizontal scrolling
-            var delta = $e.originalEvent.deltaY;
-            var scrollAmount = delta * 1;
-
-            container.scrollLeft(container.scrollLeft() + scrollAmount);
-            $e.preventDefault();
-
-        }, { passive: false });
+    buttonRight.on('click', function () {
+        var previewWidth = previewColum.width();
+        container.animate({
+            scrollLeft: '+=' + previewWidth
+        }, 300);
     });
 });
