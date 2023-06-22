@@ -59,7 +59,13 @@ $(document).ready(function () {
         });
 
         container.on('wheel', function (e) {
-            if (container.scrollLeft() >= contentWidth) {
+            // Determine if the user is scrolling up or down
+            var isScrollingUp = e.originalEvent.deltaY < 0;
+
+            // - Scrolling down - end reached by
+            if (!isScrollingUp && container.scrollLeft() >= contentWidth) {
+                return;
+            } else if (isScrollingUp && container.scrollLeft() <= 0) {
                 return;
             }
 
