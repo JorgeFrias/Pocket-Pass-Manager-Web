@@ -89,7 +89,6 @@ $(document).ready(function () {
             container.scrollLeft(container.scrollLeft() + scrollAmount);
             $e.preventDefault();
 
-            return false;
         }, { passive: false });
     });
 });
