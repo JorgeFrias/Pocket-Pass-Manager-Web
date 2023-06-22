@@ -32,21 +32,47 @@ $(document).ready(function () {
 });
 
 // Scroll horizontal
+/// Determines if the element is approximately centered vertically on the viewport
+function isElementCenteredVertically(element) {
+    // Only scroll if the container is in the viewport center
+    var windowHeight = $(window).height();
+    var containerHeight = element.outerHeight();
+    var scrollTop = $(window).scrollTop();
+
+    var exactCenterPosition = scrollTop + (windowHeight / 2) - (containerHeight / 2);
+    var errorMargin = windowHeight * 0.2; // 10% of the window height
+
+    var lowerBound = exactCenterPosition - errorMargin;
+    var upperBound = exactCenterPosition + errorMargin;
+    var containerTop = element.offset().top;
+
+    return (containerTop >= lowerBound && containerTop <= upperBound);
+}
+
+
 $(document).ready(function () {
     $(document).ready(function () {
         var container = $('.scrolling-container');
         var content = $('.scrolling-content');
-
-        container.on('wheel', function (e) {
-            if (!(container.is(e.target) || container.has(e.target).length > 0)) {
-                return;
+        var body = $('body');
+        var html = $('html');
+        
+        document.addEventListener('wheel', function(e) {
+            // Only scroll if the container is in the viewport center
+            if (!isElementCenteredVertically(container)) {
+                return true;
             }
+
+            $e = $.Event(e);
+            // $e.stopPropagation();
+            // e.stopImmediatePropagation();
+
 
             // Add up all children width + margins + paddings
             var scrollWidth = container.get(0).scrollWidth - container.outerWidth();
 
             // Determine if the user is scrolling up or down
-            var isScrollingUp = e.originalEvent.deltaY < 0;
+            var isScrollingUp = $e.originalEvent.deltaY < 0;
 
             // - Scrolling down - end reached by -> regular scrolling
             if (!isScrollingUp && container.scrollLeft() >= scrollWidth) {
@@ -56,33 +82,15 @@ $(document).ready(function () {
                 return;
             }
 
-            // Only scroll if the container is in the viewport center
-            var windowHeight = $(window).height();
-            var containerHeight = container.outerHeight();
-            var scrollTop = $(window).scrollTop();
-            
-            var exactCenterPosition = scrollTop + (windowHeight / 2) - (containerHeight / 2);
-            var errorMargin = windowHeight * 0.1; // 10% of the window height
-            
-            var lowerBound = exactCenterPosition - errorMargin;
-            var upperBound = exactCenterPosition + errorMargin;
-            var containerTop = container.offset().top;
-                        
-            if (containerTop >= lowerBound && containerTop <= upperBound) {
-                console.log("The container is approximately centered vertically on the viewport.");
-              } else {
-                console.log("The container is not approximately centered vertically on the viewport.");
-                return;
-              }
-              
             // - Scrolling down and end not reached -> horizontal scrolling
             // - Scrolling up and start not reached -> horizontal scrolling
-            var delta = e.originalEvent.deltaY;
+            var delta = $e.originalEvent.deltaY;
             var scrollAmount = delta * 1;
 
             container.scrollLeft(container.scrollLeft() + scrollAmount);
-            e.preventDefault();
+            $e.preventDefault();
 
-        });
+            return false;
+        }, { passive: false });
     });
 });
