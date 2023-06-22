@@ -53,9 +53,6 @@ function isElementCenteredVertically(element) {
 $(document).ready(function () {
     $(document).ready(function () {
         var container = $('.scrolling-container');
-        var content = $('.scrolling-content');
-        var body = $('body');
-        var html = $('html');
         
         document.addEventListener('wheel', function(e) {
             // Only scroll if the container is in the viewport center
@@ -64,9 +61,11 @@ $(document).ready(function () {
             }
 
             $e = $.Event(e);
-            // $e.stopPropagation();
-            // e.stopImmediatePropagation();
 
+            // If is scrolling horizontally let it pass
+            if ($e.originalEvent.deltaX !== 0) {
+                return;
+            }
 
             // Add up all children width + margins + paddings
             var scrollWidth = container.get(0).scrollWidth - container.outerWidth();
