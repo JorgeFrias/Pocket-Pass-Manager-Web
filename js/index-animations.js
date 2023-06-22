@@ -55,24 +55,20 @@ $(document).ready(function () {
         var container = $('.scrolling-container');
         
         document.addEventListener('wheel', function(e) {
+            // Wrap the event in a jQuery event
+            var $e = $.Event(e);
             // Only scroll if the container is in the viewport center
             if (!isElementCenteredVertically(container)) {
                 return true;
             }
-
-            $e = $.Event(e);
-
             // If is scrolling horizontally let it pass
             if ($e.originalEvent.deltaX !== 0) {
                 return;
             }
-
             // Add up all children width + margins + paddings
             var scrollWidth = container.get(0).scrollWidth - container.outerWidth();
-
             // Determine if the user is scrolling up or down
             var isScrollingUp = $e.originalEvent.deltaY < 0;
-
             // - Scrolling down - end reached by -> regular scrolling
             if (!isScrollingUp && container.scrollLeft() >= scrollWidth) {
                 return;
