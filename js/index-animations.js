@@ -56,15 +56,25 @@ $(document).ready(function () {
                 return;
             }
 
-            // Centre the content in the view
+            // Only scroll if the container is in the viewport center
             var windowHeight = $(window).height();
-            var elementHeight = container.outerHeight();
-            var topPosition = (windowHeight - elementHeight) / 2;
-            // Scroll to the centered position
-            $('html, body').scrollTop(container.offset().top - topPosition)
-            e.preventDefault();
-
-
+            var containerHeight = container.outerHeight();
+            var scrollTop = $(window).scrollTop();
+            
+            var exactCenterPosition = scrollTop + (windowHeight / 2) - (containerHeight / 2);
+            var errorMargin = windowHeight * 0.1; // 10% of the window height
+            
+            var lowerBound = exactCenterPosition - errorMargin;
+            var upperBound = exactCenterPosition + errorMargin;
+            var containerTop = container.offset().top;
+                        
+            if (containerTop >= lowerBound && containerTop <= upperBound) {
+                console.log("The container is approximately centered vertically on the viewport.");
+              } else {
+                console.log("The container is not approximately centered vertically on the viewport.");
+                return;
+              }
+              
             // - Scrolling down and end not reached -> horizontal scrolling
             // - Scrolling up and start not reached -> horizontal scrolling
             var delta = e.originalEvent.deltaY;
