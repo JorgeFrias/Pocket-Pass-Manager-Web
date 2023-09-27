@@ -1,0 +1,1 @@
+The assets folder only exists as compatibility with the app PPM versions <= 3. So the app webpage points to this resources, later they where moved to img and root.
