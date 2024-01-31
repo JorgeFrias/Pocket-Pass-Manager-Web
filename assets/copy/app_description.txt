@@ -1,27 +1,5 @@
-Pocket Pass Manager is your secure solution for password management directly on your iPhone, harnessing the power of simplicity and unmatched security.
+### Streamlined password management, simplicity and top-notch security
 
-**Streamlined User Interface**  
-With its clean and intuitive design, Pocket Pass Manager feels like a native part of your iOS experience — managing your passwords has never been more straightforward or elegant.
+**Streamlined UI.** Native to iOS, it provides an elegant and user-friendly experience. **Local Security.** Your digital keys stay on your device, shielding them from online threats. **Private Network Sync.** Safely access passwords on your devices without the internet. **Organized Access.** Easily manage passwords, Authenticator codes, WiFi details, private notes, and credit card info. **Authenticator Widget.** Quickly access codes from your home screen for faster authentication. **Biometric Quick Entry.** Use Face ID or Touch ID for secure and immediate access. **Offline Peace of Mind.** No cloud involvement reduces digital exposure, ensuring complete security for your sensitive data.
 
-**Local Security**  
-Your digital keys are secured on your device, away from online threats, ensuring your information is protected at all times.
-
-**Private Network Sync**  
-Safe password access across your devices, without the internet. Share with confidence on your network.
-
-**Organized and Accessible**  
-- Manage passwords and Authenticator codes with ease.
-- Store WiFi details securely.
-- Keep notes private.
-- Save credit card information for faster payments.
-
-**Authenticator Widget**  
-Access Authenticator codes from your home screen — the fastest way to authenticate without opening the app.
-
-**Biometric Quick Entry**  
-Enter with a touch or glance using Face ID or Touch ID, for secure and immediate access.
-
-**Offline Peace of Mind**  
-Enjoy reduced digital exposure and risk with no cloud involvement, for complete peace of mind with your sensitive data.
-
-Download Pocket Pass Manager. Designed for iOS, delivering straightforward security at your fingertips.
+**Designed exclusively for iOS, Pocket Pass Manager brings straightforward security to your fingertips.**
