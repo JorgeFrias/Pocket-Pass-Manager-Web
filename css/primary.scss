@@ -139,53 +139,57 @@ body {
 }
 
 .hero-section {
-    min-height: 80vh;
     overflow: hidden;
-
     padding-top: 4rem;
-    padding-bottom: 3rem;
-
-    @media (min-width: $breakpoint-md) {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
 
     [class^="col"] {
         @media (min-width: $breakpoint-md) {
             padding-left: $leading-spacing-md;
             padding-right: $leading-spacing-md;
         }
+    }
 
-        &.hero-title {
-            @media (min-width: $breakpoint-md) {
-                padding-right: 2rem;
-            }
+    .hero-title > div {
+        max-width: 42rem;
+    }
+
+    // The 21:9 header video (Figma "App Store 3.0", node 258:757), edge to edge
+    .hero-video {
+        margin-top: 3rem;
+        padding: 0 !important;
+
+        video {
+            display: block;
+            width: 100%;
+            aspect-ratio: 3840 / 1646;
+            object-fit: cover;
+            // Blend the pattern into the black band above and below
+            -webkit-mask-image: linear-gradient(transparent, #000 18%, #000 82%, transparent);
+            mask-image: linear-gradient(transparent, #000 18%, #000 82%, transparent);
         }
     }
 
+    // Same badge as the 3.0 App Store screenshots
+    .version-pill {
+        display: inline-block;
+        margin-bottom: 1rem;
+        padding: 0.15rem 0.6rem;
+        border-radius: 0.4rem;
+        background-color: #ffd527;
+        color: #000;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+    }
+
     .logo {
+        display: block;
         height: 2rem;
         margin-bottom: 2rem;
         max-width: 60vw;
         max-width: 100%;
         object-fit: contain;
-    }
-
-    .device {
-        // transform: scale(0) translateY(-20%);
-
-        // @media (min-width: $breakpoint-sm) {
-        //     transform: scale(0.6) translateY(-50%);
-        // }
-        transform: scale(0.8);
-
-        @media (min-width: $breakpoint-md) {
-            transform: scale(0.8);
-        }
-
-        @media (min-width: $breakpoint-lg) {
-            transform: scale(1.1) translateY(-20%);
-        }
     }
 
     .app-store-badge {
@@ -321,6 +325,7 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
+            -webkit-user-select: none; // Safari still needs the prefix
             user-select: none;
             width: 3rem;
             height: 3rem;
@@ -533,8 +538,10 @@ body {
 
     p,
     li {
-        //    font-size: 1rem;
         line-height: 1.9rem;
+    }
+
+    p {
         text-align: justify;
     }
 }

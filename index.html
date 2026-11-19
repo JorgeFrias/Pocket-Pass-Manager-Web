@@ -21,7 +21,6 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script> <!-- CSS -->
     <link rel="stylesheet" href="css/primary.min.css" />
-    <link rel="stylesheet" href="dist/devices.min.css">
     <!-- Markdown Parsing -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <!-- JS -->
@@ -36,20 +35,20 @@
 <body>
     <div class="container-fluid container-narrow header-composed">
         <!-- Hero section -->
-        <div class="row dark-bg hero-section d-flex align-items-center">
+        <div class="row dark-bg hero-section">
             <!-- App Title -->
-            <div class="col-12 col-md-6 hero-title">
+            <div class="col-12 hero-title">
                 <div class="">
                     <!-- Logo -->
                     <img src="/img/ppm-logo-white-color.svg" class="logo reveal-auto-slide-down"
                         alt="Pocket Pass Manager">
                     <!-- Title -->
-                    <h1 class="reveal-auto-slide-down">Your passwords only on your pocket</h1>
+                    <p class="version-pill reveal-auto-slide-down">New version 3</p>
+                    <h1 class="reveal-auto-slide-down">The offline password manager</h1>
                     <!-- Description -->
-                    <p class="lead reveal-auto-slide-down-2">An offline alternative to password managers that sync your
-                        most sensitive data across
-                        the
-                        internet. <strong>No password leaves your device ever.</strong></p>
+                    <p class="lead reveal-auto-slide-down-2">Pocket Pass Manager keeps your passwords, two-factor codes
+                        and private notes on your iPhone, and nowhere else. <strong>No account, no cloud, no
+                            subscription.</strong></p>
                     <!-- Download on the App Store badge -->
                     <div class="d-flex align-items-center app-store-badge reveal-auto-slide-down-2">
                         <a href="https://apps.apple.com/us/app/pocket-pass-manager/id1563839314" target="_blank"
@@ -64,25 +63,11 @@
                     </div>
                 </div>
             </div>
-            <!-- App Image -->
-            <div class="col-12 col-md-6">
-                <div class="d-flex justify-content-center">
-                    <div class="reveal-auto-slide-down-2">
-                        <div class="device device-iphone-14-pro device-black">
-                            <div class="device-frame">
-                                <!-- Video autoplay -->
-                                <video class="device-screen" autoplay muted loop playsinline>
-                                    <source src="img/hero-vid-dark.mp4" type="video/mp4">
-                            </div>
-                            <div class="device-stripe"></div>
-                            <div class="device-header"></div>
-                            <div class="device-sensors"></div>
-                            <div class="device-btns"></div>
-                            <div class="device-power"></div>
-                            <div class="device-home"></div>
-                        </div>
-                    </div>
-                </div>
+            <!-- Header video: app features fold into the app icon -->
+            <div class="col-12 hero-video reveal-auto-slide-down-2">
+                <video autoplay muted loop playsinline preload="auto" poster="img/hero-3-poster.webp" aria-hidden="true">
+                    <source src="img/hero-3.mp4" type="video/mp4">
+                </video>
             </div>
         </div>
         <!-- Features section -->
@@ -97,49 +82,41 @@
                     <div class="container-fluid p-0">
                         <div class="scrolling-wrapper scrolling-container">
                             <div class="scrolling-content">
-                                <!-- 7 previews  -->
+                                <!-- Screenshots from the App Store set (3.0) -->
                                 <div class="row flex-row flex-nowrap scrolling-width">
                                     <div class="col">
-                                        <img src="/img/screens/iPhone 14 Plus-01.png" class="" alt="Pocket Pass Manager"
-                                            loading="lazy">
+                                        <img src="/img/screens/ppm3-01.webp" alt="The offline password manager. No account, no cloud, no subscription." loading="lazy">
                                     </div>
                                     <div class="col">
-                                        <img src="/img/screens/iPhone 14 Plus-02.png" class="" alt="Pocket Pass Manager"
-                                            loading="lazy">
+                                        <img src="/img/screens/ppm3-02.webp" alt="Built-in 2FA authenticator. Codes in AutoFill and on your Home Screen." loading="lazy">
                                     </div>
                                     <div class="col">
-                                        <img src="/img/screens/iPhone 14 Plus-03.png" class="" alt="Pocket Pass Manager"
-                                            loading="lazy">
+                                        <img src="/img/screens/ppm3-03.webp" alt="Search everything: passwords, 2FA codes, cards and Wi-Fi in one place." loading="lazy">
                                     </div>
                                     <div class="col">
-                                        <img src="/img/screens/iPhone 14 Plus-04.png" class="" alt="Pocket Pass Manager"
-                                            loading="lazy">
+                                        <img src="/img/screens/ppm3-04.webp" alt="Designed so you can reach with your thumb. Tap any field to copy it." loading="lazy">
                                     </div>
                                     <div class="col">
-                                        <img src="/img/screens/iPhone 14 Plus-05.png" class="" alt="Pocket Pass Manager"
-                                            loading="lazy">
+                                        <img src="/img/screens/ppm3-duo-unfolded.webp" alt="And unfold your vault. Designed for iPhone Duo." loading="lazy">
                                     </div>
                                     <div class="col">
-                                        <img src="/img/screens/iPhone 14 Plus-06.png" class="" alt="Pocket Pass Manager"
-                                            loading="lazy">
+                                        <img src="/img/screens/ppm3-05.webp" alt="Share with people you trust. End-to-end encrypted, no account, no cloud." loading="lazy">
                                     </div>
                                     <div class="col">
-                                        <img src="/img/screens/iPhone 14 Plus-07.png" class="" alt="Pocket Pass Manager"
-                                            loading="lazy">
+                                        <img src="/img/screens/ppm3-06.webp" alt="Your cards, at hand. Tap to reveal, tap again for the security code." loading="lazy">
                                     </div>
                                     <div class="col">
-                                        <img src="/img/screens/iPhone 14 Plus-08.png" class="" alt="Pocket Pass Manager"
-                                            loading="lazy">
+                                        <img src="/img/screens/ppm3-07.webp" alt="On-device security alerts that help protect your online life." loading="lazy">
                                     </div>
                                     <div class="col">
-                                        <img src="/img/screens/iPhone 14 Plus-09.png" class="" alt="Pocket Pass Manager"
-                                            loading="lazy">
+                                        <img src="/img/screens/ppm3-08.webp" alt="Safe passwords: a different random password for each account." loading="lazy">
                                     </div>
                                     <div class="col">
-                                        <img src="/img/screens/iPhone 14 Plus-10.png" class="" alt="Pocket Pass Manager"
-                                        loading="lazy">
+                                        <img src="/img/screens/ppm3-09.webp" alt="Simple access from other devices: Mac, Windows and Linux." loading="lazy">
                                     </div>
-                                    <!-- Cols up to 10 -->
+                                    <div class="col">
+                                        <img src="/img/screens/ppm3-10.webp" alt="Codes even on StandBy. Your next code at a glance." loading="lazy">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -174,9 +151,7 @@
             
             <!-- Description Section -->
             <div class="col-12 d-flex justify-content-center">
-                <!-- <div class="app_description w-md-50 text-center" id="app_description"> -->
-                    <div class="app_description w-md-50 " id="app_description"></div>
-                </div>
+                <div class="app_description w-md-50" id="app_description"></div>
             </div>
         </div>
 
