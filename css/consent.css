@@ -48,13 +48,3 @@
     background: #fff;
     color: #000;
 }
-
-.cookie-settings {
-    padding: 0;
-    border: 0;
-    background: none;
-    color: inherit;
-    font: inherit;
-    text-decoration: underline;
-    cursor: pointer;
-}

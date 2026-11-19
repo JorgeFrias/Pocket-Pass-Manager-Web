@@ -31,7 +31,7 @@ body {
     font: 400 1rem/1.65 "Open Sans", system-ui, sans-serif;
 }
 
-header, main, footer {
+header, main {
     max-width: 46rem;
     margin: 0 auto;
     padding: 0 16px;
@@ -64,11 +64,4 @@ a { color: var(--link); }
     margin: 1.5rem 0;
 }
 
-footer {
-    margin-top: 3rem;
-    padding-top: 1.5rem;
-    padding-bottom: 2.5rem;
-    border-top: 1px solid var(--rule);
-    font-size: .9rem;
-}
-footer nav a { margin-right: 1rem; }
+main { padding-bottom: 3rem; }

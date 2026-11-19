@@ -67,10 +67,16 @@
         document.body.appendChild(b);
     }
 
-    window.openCookieSettings = showBanner;
+    // Footer "Cookie settings" links to /#cookie-settings, so it also works from the other pages.
+    document.addEventListener('click', function (e) {
+        var a = e.target.closest && e.target.closest('a[href$="#cookie-settings"]');
+        if (!a) return;
+        e.preventDefault();
+        showBanner();
+    });
 
     var choice = getChoice();
     if (choice === 'granted') loadAnalytics();
     if (choice === 'denied') clearAnalyticsCookies(); // GA can rewrite a cookie while the page unloads
-    if (!choice) document.addEventListener('DOMContentLoaded', showBanner);
+    if (!choice || location.hash === '#cookie-settings') document.addEventListener('DOMContentLoaded', showBanner);
 })();
