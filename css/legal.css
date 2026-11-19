@@ -1,0 +1,74 @@
+/* Privacy, Terms and Support pages. Plain CSS so it needs no Sass build. */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Open+Sans:wght@400;600&display=swap");
+
+:root {
+    --bg: #f0f0f0;
+    --surface: #fff;
+    --text: #000;
+    --muted: #434343;
+    --link: #0a5bd3;
+    --rule: #d6d6d6;
+    color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #000;
+        --surface: #121212;
+        --text: #fff;
+        --muted: #c5c9cb;
+        --link: #6aa8ff;
+        --rule: #2c2c2e;
+    }
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--muted);
+    font: 400 1rem/1.65 "Open Sans", system-ui, sans-serif;
+}
+
+header, main, footer {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+header { padding-top: 2rem; }
+header img { height: 2rem; }
+.logo-dark { display: none; }
+@media (prefers-color-scheme: dark) {
+    .logo-light { display: none; }
+    .logo-dark { display: inline; }
+}
+
+h1, h2 {
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    color: var(--text);
+    line-height: 1.25;
+}
+h1 { font-size: 2rem; margin: 2rem 0 .5rem; }
+h2 { font-size: 1.3rem; margin: 2.2rem 0 .6rem; }
+strong { color: var(--text); font-weight: 600; }
+a { color: var(--link); }
+.updated { font-size: .9rem; }
+
+.card {
+    background: var(--surface);
+    border-radius: 14px;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+}
+
+footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+    border-top: 1px solid var(--rule);
+    font-size: .9rem;
+}
+footer nav a { margin-right: 1rem; }
