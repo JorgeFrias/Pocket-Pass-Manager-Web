@@ -1,0 +1,60 @@
+/* Cookie consent banner (js/consent.js). */
+#consent-banner {
+    position: fixed;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    z-index: 1000;
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 1rem 1.25rem;
+    border-radius: 14px;
+    background: #1c1c1e;
+    color: #c5c9cb;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, .35);
+    font-family: "Open Sans", sans-serif;
+    font-size: .95rem;
+}
+
+#consent-banner p {
+    margin: 0 0 .75rem;
+    color: #c5c9cb;
+}
+
+#consent-banner a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+#consent-banner .consent-buttons {
+    display: flex;
+    gap: .5rem;
+    justify-content: flex-end;
+}
+
+/* Same weight for both choices, as GDPR guidance expects. */
+#consent-banner button {
+    min-width: 6.5rem;
+    padding: .5rem 1rem;
+    border: 1px solid #fff;
+    border-radius: 999px;
+    background: transparent;
+    color: #fff;
+    font: 600 .95rem "Open Sans", sans-serif;
+    cursor: pointer;
+}
+
+#consent-banner button[data-consent="granted"] {
+    background: #fff;
+    color: #000;
+}
+
+.cookie-settings {
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+}
