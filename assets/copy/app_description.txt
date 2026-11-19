@@ -1,13 +1,8 @@
-### New in Pocket Pass Manager 3.0
+### Streamlined password management, simplicity and top-notch security
 
-- **Redesigned for iOS 27**, with native sheets everywhere. Tap any field to copy it.
-- **Search your whole vault** from its own tab: passwords, codes, cards, Wi-Fi, notes and HomeKit.
-- **Share passwords with people you trust**, end-to-end encrypted. No account and no cloud.
-- **Verification codes in AutoFill**, right above the keyboard.
-- **A widget for your Home Screen and StandBy**, with your most used codes.
-- **Safer by design:** when the app locks, nothing stays decrypted, and secrets are read only when you use them.
-- **Made for iPhone Duo:** unfold it to see your list and the selected item side by side.
-- **Security report:** an offline check finds common and reused passwords, so you know what to change first.
+**Streamlined UI.** Native to iOS, it provides an elegant and user-friendly experience. **Local Security.** Your digital keys stay on your device, shielding them from online threats. **Private Network Sync.** Safely access passwords on your devices without the internet. **Organized Access.** Easily manage passwords, Authenticator codes, WiFi details, private notes, and credit card info. **Authenticator Widget.** Quickly access codes from your home screen for faster authentication. **Biometric Quick Entry.** Use Face ID or Touch ID for secure and immediate access. **Offline Peace of Mind.** No cloud involvement reduces digital exposure, ensuring complete security for your sensitive data.
+
+**Designed exclusively for iOS, Pocket Pass Manager brings straightforward security to your fingertips.**
 
 **Passwords and AutoFill.** Save logins and fill them in Safari and other apps. Create strong passwords or easy-to-type passphrases with the built-in generator.
 
