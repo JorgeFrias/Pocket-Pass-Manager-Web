@@ -1,10 +1,10 @@
-/* Site footer, shared by every page. Always dark, like the site's .dark-bg bands. */
+/* Site footer, shared by every page. Always light, like the site's .light-bg bands. */
 .site-footer {
-    --ft-bg: #000;
-    --ft-text: #c5c9cb;
-    --ft-strong: #fff;
-    --ft-accent: #ffd527;
-    --ft-rule: #2c2c2e;
+    --ft-bg: #f0f0f0;
+    --ft-text: #434343;
+    --ft-strong: #000;
+    --ft-accent: #000;
+    --ft-rule: #d6d6d6;
 
     background: var(--ft-bg);
     color: var(--ft-text);
@@ -105,4 +105,4 @@
 }
 
 .site-footer .ft-bottom p { margin: 0; color: var(--ft-text); }
-.site-footer .ft-bottom a { color: var(--ft-strong); }
+.site-footer .ft-bottom a { color: var(--ft-strong); text-decoration: underline; }

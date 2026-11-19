@@ -169,6 +169,23 @@ body {
         }
     }
 
+    // Large screens: the video sits beside the title, cropped around the centred app icon
+    @media (min-width: $breakpoint-xl) {
+        .hero-title {
+            padding-right: 1.5rem !important;
+        }
+
+        .hero-video {
+            margin-top: 0;
+
+            video {
+                aspect-ratio: 5 / 4;
+                -webkit-mask-image: radial-gradient(closest-side, #000 60%, transparent);
+                mask-image: radial-gradient(closest-side, #000 60%, transparent);
+            }
+        }
+    }
+
     // Same badge as the 3.0 App Store screenshots
     .version-pill {
         display: inline-block;
